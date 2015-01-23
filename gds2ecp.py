@@ -46,6 +46,10 @@ def check_shape(coords):
     # Check for RECT
     if (abs(y2 - y1) == abs(y3-y4)) and (abs(x2-x1) == abs(x3-x1)):
         print('RECT')
+    elif (abs(y3 - y2) == abs(y4-y1)):
+        print('XPOLY')
+    elif (abs(x4-x1) == abs(x3-x2)):
+        print('YPOLY')
     else:
         print('Unknown shape')
         
@@ -59,7 +63,7 @@ def check_shape(coords):
     
 #print (getxy('writefield.txt'))
 
-grouped = grouper(getxy('writefield.txt'),10)
+grouped = grouper(getxy('YPOLY.txt'),10)
 #print list(grouped)
 
 xy_coords = to_coords(list(grouped))
