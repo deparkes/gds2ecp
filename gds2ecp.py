@@ -12,11 +12,14 @@ def getxy(gds_file):
                 line = line.strip('XY: ')
                 line = line.strip('\n')
                 line = line.split(', ')
+                # Convert list of strings to list of ints
+                line = map(int, line)   
                 return line
                 
 def to_coords(coords):
     """ Do this on a per-shape basis """
     # Separate out into xy coordinate pairs
+    # Return pairs of (x,y) coordinates
     for chunk in coords:
         xy_pairs = grouper(chunk,2)
         xy_list = list(xy_pairs)
@@ -29,9 +32,23 @@ def check_shape(coords):
         Have to be a bit careful, because of the slightly odd way ecp labels
         its x and y coordinates.
         """
+    x1 = coords[0][0]
+    y1 = coords[0][1]
+    x2 = coords[1][0]
+    y2 = coords[1][1]
+    x3 = coords[2][0]
+    y3 = coords[2][1]
+    x4 = coords[3][0]
+    y4 = coords[3][1]
+    x5 = coords[4][0]
+    y5 = coords[4][1]
+        
     # Check for RECT
-    # if y2 - y1 = y3-y1 & x2-x1 = x3-x1 then RECT
-    
+    if (abs(y2 - y1) == abs(y3-y4)) and (abs(x2-x1) == abs(x3-x1)):
+        print('RECT')
+    else:
+        print('Unknown shape')
+        
     # Check for xpoly
     # if y4 - y1 = 0 & y3 - y2 = 0 then XPOLY
         
