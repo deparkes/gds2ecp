@@ -1,5 +1,5 @@
 # gds2ecp
-Convert gds2 files to pat files for Xenos ECP CAD files
+Convert gds2 files to pat files for Xenos ECP CAD files.
 
 Copyright 2015 
 Duncan Parkes 
@@ -37,10 +37,11 @@ in keeping with gds2txt.py script with gdsii package.
 - Split XY coords list into 5 coords to put into pat file components: RECT, XPOLY, YPOLY
 - check which pat file shape each set of 5 coords should be
 - Output correct format for pat files
-- Figure out how to deal with
-- 
+- Figure out how to deal with repeated shapes
+- Figure out how to divide gds boundaries into pat shapes
 
 ## Code features
 - objects for individual patterns
 - config parser
 - opt parser 
+- Also output ctl control files
