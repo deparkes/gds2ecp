@@ -44,4 +44,7 @@ in keeping with gds2txt.py script with gdsii package.
 - objects for individual patterns
 - config parser
 - opt parser 
-- Also output ctl control files
+- Also output ctl control 
+
+## Notes
+Use something like: https://code.google.com/p/poly2tri/ to triangulate more complicated polygons. Not sure if this is the best way.
