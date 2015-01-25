@@ -47,4 +47,6 @@ in keeping with gds2txt.py script with gdsii package.
 - Also output ctl control 
 
 ## Notes
-Use something like: https://code.google.com/p/poly2tri/ to triangulate more complicated polygons. Not sure if this is the best way.
+- Use something like: https://code.google.com/p/poly2tri/ to triangulate more complicated polygons. Not sure if this is the best way.
+- A better way is probably to do something like this to break a polygon into 'primitives'. http://creativemachines.cornell.edu/papers/CSG96_Lipson.pdf
+- This guide on python cad talks about primitives
