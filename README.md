@@ -50,3 +50,7 @@ in keeping with gds2txt.py script with gdsii package.
 - Use something like: https://code.google.com/p/poly2tri/ to triangulate more complicated polygons. Not sure if this is the best way.
 - A better way is probably to do something like this to break a polygon into 'primitives'. http://creativemachines.cornell.edu/papers/CSG96_Lipson.pdf
 - This guide on python cad talks about primitives
+- ECP actually only breaks the gds boundary into XPOLY and RECT. So it should be possible to do something like: for each vertex of the polygon put a horizontal (constant x) line out in the positive and negative x direction. Keep going until it hits the edge of the polygon. Go to the next vertex and do the same.	
+
+Determine if point is inside polygon:
+http://www.ariel.com.au/a/python-point-int-poly.html
