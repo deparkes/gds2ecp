@@ -53,3 +53,11 @@ in keeping with gds2txt.py script with gdsii package.
 - alpha hull: http://blog.thehumangeo.com/2014/05/12/drawing-boundaries-in-python/
 http://nbviewer.ipython.org/github/dwyerk/boundaries/blob/master/concave_hulls.ipynb
 http://sgillies.net/blog/1155/the-fading-shape-of-alpha/
+=======
+- ECP actually only breaks the gds boundary into XPOLY and RECT. So it should be possible to do something like: for each vertex of the polygon put a horizontal (constant x) line out in the positive and negative x direction. Keep going until it hits the edge of the polygon. Go to the next vertex and do the same.	
+
+Determine if point is inside polygon:
+http://www.ariel.com.au/a/python-point-int-poly.html
+Or probably better, use shapely:
+http://toblerity.org/shapely/manual.html#contains
+
