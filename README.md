@@ -54,3 +54,5 @@ in keeping with gds2txt.py script with gdsii package.
 
 Determine if point is inside polygon:
 http://www.ariel.com.au/a/python-point-int-poly.html
+Or probably better, use shapely:
+http://toblerity.org/shapely/manual.html#contains
