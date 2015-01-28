@@ -50,3 +50,6 @@ in keeping with gds2txt.py script with gdsii package.
 - Use something like: https://code.google.com/p/poly2tri/ to triangulate more complicated polygons. Not sure if this is the best way.
 - A better way is probably to do something like this to break a polygon into 'primitives'. http://creativemachines.cornell.edu/papers/CSG96_Lipson.pdf
 - This guide on python cad talks about primitives
+- alpha hull: http://blog.thehumangeo.com/2014/05/12/drawing-boundaries-in-python/
+http://nbviewer.ipython.org/github/dwyerk/boundaries/blob/master/concave_hulls.ipynb
+http://sgillies.net/blog/1155/the-fading-shape-of-alpha/
