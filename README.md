@@ -71,3 +71,4 @@ http://sarielhp.org/teach/2004/b/24_partition_slides.pdf
 
 Trapezoidation:
 https://books.google.co.uk/books?id=iYzYh1uWjbgC&lpg=PA75&ots=EDfydPmTQC&dq=polygon%20trapezoidation&pg=PA83#v=onepage&q=polygon%20trapezoidation&f=false
+A fast trapezoidation technique for planar polygons: doi:10.1016/S0097-8493(01)00180-7
