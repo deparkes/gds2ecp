@@ -61,4 +61,13 @@ http://www.ariel.com.au/a/python-point-int-poly.html
 Or probably better, use shapely:
 http://toblerity.org/shapely/manual.html#contains
 
+http://stackoverflow.com/questions/6989100/sort-points-in-clockwise-order
 
+I think the approach I am going for is this: http://en.wikipedia.org/wiki/Monotone_polygon
+http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain
+
+Decomposition
+http://sarielhp.org/teach/2004/b/24_partition_slides.pdf
+
+Trapezoidation:
+https://books.google.co.uk/books?id=iYzYh1uWjbgC&lpg=PA75&ots=EDfydPmTQC&dq=polygon%20trapezoidation&pg=PA83#v=onepage&q=polygon%20trapezoidation&f=false
