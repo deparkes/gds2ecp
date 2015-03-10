@@ -69,6 +69,12 @@ http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monot
 Decomposition
 http://sarielhp.org/teach/2004/b/24_partition_slides.pdf
 
-Trapezoidation:
+### Trapezoidation:
 https://books.google.co.uk/books?id=iYzYh1uWjbgC&lpg=PA75&ots=EDfydPmTQC&dq=polygon%20trapezoidation&pg=PA83#v=onepage&q=polygon%20trapezoidation&f=false
 A fast trapezoidation technique for planar polygons: doi:10.1016/S0097-8493(01)00180-7
+
+A universal trapezoidation algorithm for planar polygons: doi:10.1016/S0097-8493(99)00044-8
+
+A simple and fast incremental randomized algorithm for computing trapezoidal decompositions and for triangulating polygons
+https://www.cs.princeton.edu/courses/archive/fall05/cos528/handouts/A%20Simple%20and%20fast.pdf
+doi:10.1016/0925-7721(91)90012-4
