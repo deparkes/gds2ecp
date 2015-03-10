@@ -22,30 +22,47 @@ The answers to this question allow us to pick out the coordinate pairs from
 the gds boundary list:
 http://stackoverflow.com/questions/4628290/pairs-from-single-list
 
+Although not strictly necessary, we'll also plot the resulting LinearRing
+to check that everything is as expected. Plotting functions taken from 
+LinearRing.py shapely example.
+
 """
 
 from itertools import izip
 from matplotlib import pyplot as plt
 from shapely.geometry import LinearRing
 
-
+# Gds coordinate extraction functions
 def pairwise(t):
     it = iter(t)
     return izip(it,it)
 
-# for "pairs" of any length
-def chunkwise(t, size=2):
-    it = iter(t)
-    return izip(*[it]*size)
+# Plotting functions taken from shapely example LinearRing.py
+COLOR = {
+    True:  '#6699cc',
+    False: '#ff3333'
+    }
 
-# Use a test
+def v_color(ob):
+    return COLOR[ob.is_valid]
+
+def plot_line(ax, ob):
+    x, y = ob.xy
+    ax.plot(x, y, color=v_color(ob), alpha=0.7, linewidth=3, solid_capstyle='round', zorder=2)
+
+# Use a test gds boundary
+# Assume this has been extracted from a gds file
 gds_test = (0, 0, 30000, 0, 15000, 15000, 5000, 15000, 0, 0)
 
+# Extract the coordinates pairwise from the gds boundary
 ring = list(pairwise(gds_test))
 
-print ring
+# Need to convert out list into a ring for the plotting function to work
+ring = LinearRing(ring)
 
-# Not really necessary, but we can also plot this
+# We don't have to plot LinearRing, but it is a handy way to check it works
+fig = plt.figure(1, figsize=(10,10), dpi=90)
+ax = fig.add_subplot(111)
+plot_line(ax, ring)
 
-patch2b = PolygonPatch(u, fc=BLUE, ec=BLUE, alpha=0.5, zorder=2)
-ax.add_patch(patch2b)
+
